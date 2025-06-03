@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - CodePlaza</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe.js/3.0.0/stripe.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CodePlaza</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+            </ul>
+            <!-- Theme toggle button -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero">
+        <div class="hero-container">
+            <h1>Developer Tools & Products</h1>
+            <p>Premium tools to supercharge your development workflow</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">⚡</div>
+                <div class="product-info">
+                    <h3>Code Generator Pro</h3>
+                    <p class="product-description">Advanced AI-powered code generation tool that writes clean, optimized code in multiple programming languages.</p>
+                    <div class="product-price">$49.99</div>
+                    <button class="buy-button" data-product="code-generator" data-price="4999">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🛠️</div>
+                <div class="product-info">
+                    <h3>API Toolkit Ultimate</h3>
+                    <p class="product-description">Complete API development suite with testing, documentation, and monitoring tools all in one package.</p>
+                    <div class="product-price">$79.99</div>
+                    <button class="buy-button" data-product="api-toolkit" data-price="7999">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🐛</div>
+                <div class="product-info">
+                    <h3>Debug Master Suite</h3>
+                    <p class="product-description">Professional debugging tools with advanced breakpoints, variable inspection, and performance profiling.</p>
+                    <div class="product-price">$34.99</div>
+                    <button class="buy-button" data-product="debug-suite" data-price="3499">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📊</div>
+                <div class="product-info">
+                    <h3>Performance Analytics</h3>
+                    <p class="product-description">Real-time application monitoring and performance analytics with detailed insights and optimization suggestions.</p>
+                    <div class="product-price">$59.99</div>
+                    <button class="buy-button" data-product="performance-analytics" data-price="5999">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔧</div>
+                <div class="product-info">
+                    <h3>IDE Extensions Pack</h3>
+                    <p class="product-description">Premium collection of IDE extensions for enhanced productivity, including themes, snippets, and shortcuts.</p>
+                    <div class="product-price">$24.99</div>
+                    <button class="buy-button" data-product="ide-extensions" data-price="2499">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔐</div>
+                <div class="product-info">
+                    <h3>Security Scanner Pro</h3>
+                    <p class="product-description">Advanced security scanning tool that identifies vulnerabilities and provides fix recommendations for your code.</p>
+                    <div class="product-price">$89.99</div>
+                    <button class="buy-button" data-product="security-scanner" data-price="8999">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodePlaza - Developer Tools & Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe.js/3.0.0/stripe.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CodePlaza</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+            <!-- Theme toggle button -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Welcome to CodePlaza</h1>
+            <p>Your one-stop shop for premium developer tools and digital products</p>
+            <a href="shop.html" class="cta-button">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="review-slider">
+                <div class="review-card active">
+                    <div class="review-header">
+                        <div class="user-avatar">AJ</div>
+                        <div class="user-info">
+                            <h4>Alex Johnson</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"CodePlaza has revolutionized my development workflow. The tools are top-notch and the support is incredible. Highly recommended for any serious developer!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">SM</div>
+                        <div class="user-info">
+                            <h4>Sarah Martinez</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Amazing quality products at great prices. I've been using their IDE extensions for months and they've saved me countless hours. Worth every penny!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">DL</div>
+                        <div class="user-info">
+                            <h4>David Lee</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Great selection of developer tools. The code generator Pro has boosted my productivity significantly. Fast delivery and excellent customer service."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">MR</div>
+                        <div class="user-info">
+                            <h4>Maria Rodriguez</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"As a freelance developer, CodePlaza's tools have been game-changers. The API toolkit especially has helped me deliver projects faster and more efficiently."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">JW</div>
+                        <div class="user-info">
+                            <h4>James Wilson</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Excellent products and even better support. When I had questions about integration, their team responded within hours with detailed solutions."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">KT</div>
+                        <div class="user-info">
+                            <h4>Katie Thompson</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Love the clean interface and powerful features. The debugging toolkit has become an essential part of my development stack. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Dark mode toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            toggleBtn.textContent = '☀️';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            if (body.classList.contains('dark')) {
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Review slider logic
+        const reviews = document.querySelectorAll('.review-card');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            reviews[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % reviews.length;
+            reviews[currentIndex].classList.add('active');
+        }, 4000);
+    </script>
+</body>
+</html>
