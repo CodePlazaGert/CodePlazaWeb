@@ -1,5 +1,3 @@
-const stripe = Stripe('pk_test_51234567890abcdef');
-
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
