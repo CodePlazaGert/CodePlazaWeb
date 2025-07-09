@@ -11,7 +11,7 @@ body {
     background: #f8fafc;
 }
 
-/* Navigation */
+
 .navbar {
     background: #fff;
     padding: 1rem 0;
@@ -59,7 +59,7 @@ body {
     background: #f1f5f9;
 }
 
-/* Hero Section */
+
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -101,7 +101,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Reviews Section */
+
 .reviews {
     padding: 80px 0;
     background: #fff;
@@ -258,7 +258,7 @@ body {
     transform: translateY(0);
 }
 
-/* Loading animation */
+
 .loading {
     display: inline-block;
     width: 20px;
@@ -273,7 +273,7 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 1rem;
@@ -300,9 +300,9 @@ body {
         padding: 0 1rem;
     }
 }
-/* ... existing styles ... */
 
-/* Theme Toggle Button */
+
+
 .theme-toggle {
     background: none;
     border: none;
@@ -311,7 +311,7 @@ body {
     color: inherit;
 }
 
-/* Review Slider Fixes */
+
 .review-slider {
     position: relative;
     min-height: 280px;
@@ -334,7 +334,7 @@ body {
     position: relative;
 }
 
-/* Maintain original visual styling for review-card */
+
 .review-card {
     background: #f8fafc;
     padding: 2rem;
@@ -349,7 +349,6 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
-/* Dark mode overrides remain unchanged (already handled correctly) */
 
 
 body.dark {
