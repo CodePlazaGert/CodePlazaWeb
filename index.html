@@ -8,7 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stripe.js/3.0.0/stripe.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">CodePlaza</a>
@@ -16,12 +15,10 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
             </ul>
-            <!-- Theme toggle button -->
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <h1>Welcome to CodePlaza</h1>
@@ -30,7 +27,7 @@
         </div>
     </section>
 
-    <!-- Customer Reviews Section -->
+    
     <section class="reviews">
         <div class="container">
             <h2 class="section-title">What Our Customers Say</h2>
@@ -106,7 +103,7 @@
 
     <script src="script.js" defer></script>
     <script>
-        // Dark mode toggle
+        
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
 
@@ -126,7 +123,7 @@
             }
         });
 
-        // Review slider logic
+      
         const reviews = document.querySelectorAll('.review-card');
         let currentIndex = 0;
 
